@@ -1,6 +1,6 @@
 export const state = () => ({
   navState: false,
-  fileURL: "",
+  features: "",
   confirmMsg: "",
   confirmState: true,
 });
@@ -20,8 +20,8 @@ export const mutations = {
     state.navState = !state.navState;
   },
 
-  setTransaction(state, result) {
-    state.transaction = result;
+  setFeatures(state, form) {
+    state.features = form;
   },
 
   setUser(state, data) {

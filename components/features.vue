@@ -20,13 +20,11 @@
       <div class="feature_title">Cicle Index</div>
       <input
         class="feature_input lon w-input"
-        maxlength="256"
-        name="index"
-        data-name="index"
+        v-model="Cycle_Index"
+        @blur="setFeatures"
+        @keyup="setFeatures"
         placeholder="0"
-        type="text"
-        id="index"
-        required=""
+        type="number"
       />
       <div class="feature_footer">
         <div>0</div>
@@ -37,13 +35,11 @@
       <div class="feature_title">Discharge Time</div>
       <input
         class="feature_input lon w-input"
-        maxlength="256"
-        name="index-4"
-        data-name="Index 4"
-        placeholder="0"
-        type="text"
-        id="index-4"
-        required=""
+        v-model="Discharge_Time"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="Enter Discharge Time"
+        type="number"
       />
       <div class="feature_footer">
         <div>0</div>
@@ -54,13 +50,11 @@
       <div class="feature_title">Decrement</div>
       <input
         class="feature_input lon w-input"
-        maxlength="256"
-        name="index-4"
-        data-name="Index 4"
-        placeholder="0"
-        type="text"
-        id="index-4"
-        required=""
+        v-model="Decrement"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="Enter Decrement"
+        type="number"
       />
       <div class="feature_footer">
         <div>0</div>
@@ -75,22 +69,18 @@
       <div class="feature-input-flex">
         <input
           class="feature_input w-input"
-          maxlength="256"
-          name="index-3"
-          data-name="Index 3"
-          placeholder="0"
-          type="text"
-          id="index-3"
-          required=""
+          v-model="Min_Voltage_Charge"
+          @blur="setFeatures"
+          @keyup="setFeatures"
+          placeholder="Enter Min Voltage"
+          type="number"
         /><input
           class="feature_input w-input"
-          maxlength="256"
-          name="index-2"
-          data-name="Index 2"
-          placeholder="0"
-          type="text"
-          id="index-2"
-          required=""
+          v-model="Max_Voltage_Discharge"
+          @blur="setFeatures"
+          @keyup="setFeatures"
+          placeholder="Enter Max Voltage"
+          type="number"
         />
       </div>
       <div class="feature_footer">
@@ -102,13 +92,11 @@
       <div class="feature_title">Time Constant</div>
       <input
         class="feature_input lon w-input"
-        maxlength="256"
-        name="index-3"
-        data-name="Index 3"
-        placeholder="0"
-        type="text"
-        id="index-3"
-        required=""
+        v-model="Time"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="Enter Time"
+        type="number"
       />
       <div class="feature_footer">
         <div>0</div>
@@ -119,13 +107,11 @@
       <div class="feature_title">Charging Time</div>
       <input
         class="feature_input lon w-input"
-        maxlength="256"
-        name="index-3"
-        data-name="Index 3"
+        v-model="Charging_time"
+        @blur="setFeatures"
+        @keyup="setFeatures"
         placeholder="0"
-        type="text"
-        id="index-3"
-        required=""
+        type="number"
       />
       <div class="feature_footer">
         <div>0</div>
@@ -136,9 +122,35 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      Cycle_Index: "",
+      Discharge_Time: "",
+      Decrement: "",
+      Max_Voltage_Discharge: "",
+      Min_Voltage_Charge: "",
+      Time: "",
+      Time_constant_current: "",
+      Charging_time: "",
+    };
+  },
   methods: {
     toggleNavState() {
       this.$store.commit("TOGGLE_NAV");
+    },
+
+    setFeatures() {
+      const form = {
+        Cycle_Index: this.Cycle_Index,
+        Discharge_Time: this.Discharge_Time,
+        Decrement: this.Decrement,
+        Max_Voltage_Discharge: this.Max_Voltage_Discharge,
+        Min_Voltage_Charge: this.Min_Voltage_Charge,
+        Time: this.Time,
+        Time_constant_current: this.Time_constant_current,
+        Charging_time: this.Charging_time,
+      };
+      this.$store.commit("setFeatures", form);
     },
   },
   computed: {

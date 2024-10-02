@@ -35,7 +35,7 @@
     <div v-if="isError" class="error">{{ error }}</div>
     <div class="prediction-body" v-if="showResponse">
       <div class="prediction-title">
-        Battery Remaining Useful Life: {{ prediction }}
+        Battery Remaining Useful Life: {{ (prediction * 1).toFixed(5) }}
       </div>
       <div class="prediction-title">Battery Health Condition: {{ health }}</div>
       <div>

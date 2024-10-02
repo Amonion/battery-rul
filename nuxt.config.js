@@ -16,26 +16,26 @@ export default {
       {
         name: "description",
         content:
-          "The best online banking for fast local & international transactions without limits...",
+          "One of the best online battery prediction model on battery remaining useful life.",
       },
       {
         property: "og:description",
         content:
-          "The best online banking for fast local & international transactions without limits...",
+          "One of the best online battery prediction model on battery remaining useful life.",
       },
       {
         property: "og:image",
-        content: "https://americanwealthvault.com/logo.png",
+        content: "https://https://battery-rul.netlify.app/logo.png",
       },
       { property: "twitter:title", content: "Bank Manager" },
       {
         property: "twitter:image",
-        content: "https://americanwealthvault.com/logo.png",
+        content: "https://https://battery-rul.netlify.app/logo.png",
       },
       {
         property: "twitter:description",
         content:
-          "The best online banking software to manage and automate banking activities...",
+          "One of the best online battery prediction model on battery remaining useful life.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -92,6 +92,21 @@
       <div class="feature_title">Time Constant</div>
       <input
         class="feature_input lon w-input"
+        v-model="Time_constant_current"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="Enter Time Constant"
+        type="number"
+      />
+      <div class="feature_footer">
+        <div>0</div>
+        <div>1112</div>
+      </div>
+    </div>
+    <div class="each-feature-input">
+      <div class="feature_title">Time</div>
+      <input
+        class="feature_input lon w-input"
         v-model="Time"
         @blur="setFeatures"
         @keyup="setFeatures"

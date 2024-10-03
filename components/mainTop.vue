@@ -1,5 +1,5 @@
 <template>
-  <div class="main-top-container">
+  <div style="background: #382973" class="main-top-container">
     <svg
       width="100%"
       height="100%"

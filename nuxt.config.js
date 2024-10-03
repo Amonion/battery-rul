@@ -4,7 +4,7 @@ export default {
     title: "Battery Remaining Useful Life",
     htmlAttrs: {
       lang: "en",
-      "data-wf-domain": "americanwealthvault.com",
+      "data-wf-domain": "https://battery-rul.netlify.app",
       "data-wf-page": "Battery Remaining Useful Life",
       "data-wf-site": "Battery Remaining Useful Life",
     },
@@ -25,12 +25,15 @@ export default {
       },
       {
         property: "og:image",
-        content: "https://https://battery-rul.netlify.app/logo.png",
+        content: "https://battery-rul.netlify.app/logo.png",
       },
-      { property: "twitter:title", content: "Bank Manager" },
+      {
+        property: "twitter:title",
+        content: "Forecasting Lithium-Ion Battery RUL",
+      },
       {
         property: "twitter:image",
-        content: "https://https://battery-rul.netlify.app/logo.png",
+        content: "https://battery-rul.netlify.app/logo.png",
       },
       {
         property: "twitter:description",

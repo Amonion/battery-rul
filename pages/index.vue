@@ -80,7 +80,8 @@ export default {
       url1: "https://battery-backend.onrender.com",
     };
   },
-  created() {
+
+  mounted() {
     fetch(`${this.url1}/api/models/`)
       .then((response) => response.json())
       .then((data) => {

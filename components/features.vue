@@ -27,8 +27,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>1</div>
+        <div>1134</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -42,8 +42,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>8.69</div>
+        <div>958320.37</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -57,8 +57,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>-397645.908</div>
+        <div>406703.768</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -84,8 +84,8 @@
         />
       </div>
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>3.022</div>
+        <div>4.379</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -99,8 +99,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>5.98</div>
+        <div>880728.1</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -114,8 +114,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>-113.584</div>
+        <div>245101.117</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -129,8 +129,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>0</div>
-        <div>1112</div>
+        <div>5.98</div>
+        <div>880728.1</div>
       </div>
     </div>
   </div>
@@ -139,16 +139,59 @@
 export default {
   data() {
     return {
-      Cycle_Index: "",
-      Discharge_Time: "",
-      Decrement: "",
-      Max_Voltage_Discharge: "",
-      Min_Voltage_Charge: "",
+      Cycle_Index: 1,
+      Discharge_Time: 8.69,
+      Decrement: 0,
+      Max_Voltage_Discharge: 3.043,
+      Min_Voltage_Charge: 3.022,
       Time: "",
-      Time_constant_current: "",
+      Time_constant_current: 5.98,
       Charging_time: "",
+      features: [
+        {
+          column: "Cycle_Index",
+          min: 1,
+          max: 1134,
+        },
+        {
+          column: "Discharge_Time",
+          min: 8.69,
+          max: 958320.37,
+        },
+        {
+          column: "Decrement",
+          min: -397645.908,
+          max: 406703.768,
+        },
+        {
+          column: "Max_Voltage_Discharge",
+          min: 3.043,
+          max: 4.363,
+        },
+        {
+          column: "Min_Voltage_Charge",
+          min: 3.022,
+          max: 4.379,
+        },
+        {
+          column: "Time",
+          min: -113.584,
+          max: 245101.117,
+        },
+        {
+          column: "Time_constant_current",
+          min: 5.98,
+          max: 880728.1,
+        },
+        {
+          column: "Charging_time",
+          min: 5.98,
+          max: 880728.1,
+        },
+      ],
     };
   },
+
   methods: {
     toggleNavState() {
       this.$store.commit("TOGGLE_NAV");
@@ -176,9 +219,12 @@ export default {
 };
 </script>
 <style>
-.features_nav.active {
+.features_nav {
   transition: 0.3s all;
+  height: 100vh;
+  overflow: auto;
 }
+
 @media screen and (max-width: 991px) {
   .features_nav.active {
     position: fixed;

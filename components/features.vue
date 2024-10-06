@@ -21,7 +21,7 @@
       <input
         class="feature_input lon w-input"
         v-model="Cycle_Index"
-        @blur="setFeatures"
+        @blur="setFeatures(1, 1134, 'Cycle_Index')"
         @keyup="setFeatures"
         placeholder="0"
         type="number"
@@ -44,21 +44,6 @@
       <div class="feature_footer">
         <div>8.69</div>
         <div>958320.37</div>
-      </div>
-    </div>
-    <div class="each-feature-input">
-      <div class="feature_title">Decrement</div>
-      <input
-        class="feature_input lon w-input"
-        v-model="Decrement"
-        @blur="setFeatures"
-        @keyup="setFeatures"
-        placeholder="Enter Decrement"
-        type="number"
-      />
-      <div class="feature_footer">
-        <div>-397645.908</div>
-        <div>406703.768</div>
       </div>
     </div>
     <div class="each-feature-input">
@@ -88,36 +73,7 @@
         <div>4.379</div>
       </div>
     </div>
-    <div class="each-feature-input">
-      <div class="feature_title">Time Constant</div>
-      <input
-        class="feature_input lon w-input"
-        v-model="Time_constant_current"
-        @blur="setFeatures"
-        @keyup="setFeatures"
-        placeholder="Enter Time Constant"
-        type="number"
-      />
-      <div class="feature_footer">
-        <div>5.98</div>
-        <div>880728.1</div>
-      </div>
-    </div>
-    <div class="each-feature-input">
-      <div class="feature_title">Time</div>
-      <input
-        class="feature_input lon w-input"
-        v-model="Time"
-        @blur="setFeatures"
-        @keyup="setFeatures"
-        placeholder="Enter Time"
-        type="number"
-      />
-      <div class="feature_footer">
-        <div>-113.584</div>
-        <div>245101.117</div>
-      </div>
-    </div>
+
     <div class="each-feature-input">
       <div class="feature_title">Charging Time</div>
       <input
@@ -144,9 +100,7 @@ export default {
       Decrement: 0,
       Max_Voltage_Discharge: 3.043,
       Min_Voltage_Charge: 3.022,
-      Time: "",
-      Time_constant_current: 5.98,
-      Charging_time: "",
+      Charging_time: 5.98,
       features: [
         {
           column: "Cycle_Index",
@@ -197,6 +151,16 @@ export default {
       this.$store.commit("TOGGLE_NAV");
     },
 
+    setValues(min, max, type) {
+      if (type == "Cycle_Index") {
+        if (this.Cycle_Index < min) {
+          this.Cycle_Index = min;
+        } else if (this.Cycle_Index > max) {
+          this.Cycle_Index = max;
+        }
+      }
+    },
+
     setFeatures() {
       const form = {
         Cycle_Index: this.Cycle_Index,
@@ -223,6 +187,7 @@ export default {
   transition: 0.3s all;
   height: 100vh;
   overflow: auto;
+  z-index: 2;
 }
 
 @media screen and (max-width: 991px) {
@@ -232,6 +197,7 @@ export default {
     bottom: 0%;
     left: 0%;
     overflow: auto;
+    z-index: 2;
   }
 }
 </style>

@@ -13,6 +13,8 @@
     "@ckeditor/ckeditor5-vue2": "^3.0.1",
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@vite-pwa/nuxt": "^0.10.5",
     "cheerio": "^1.0.0-rc.12",
     "core-js": "^3.25.3",
     "date-fns": "^4.0.0",

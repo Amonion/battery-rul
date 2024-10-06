@@ -68,7 +68,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/fontLoader.js", mode: "client" }],
+  plugins: [
+    { src: "~/plugins/fontLoader.js", mode: "client" },
+    { src: "~/plugins/install.client.js", mode: "client" },
+  ],
 
   router: {
     base: "/",
@@ -105,12 +108,51 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth"],
+  modules: ["@nuxtjs/pwa"],
 
   generate: {
     routes: [
       // Add the confirmation route to the generated routes
     ],
+  },
+
+  pwa: {
+    registerType: "autoUpdate", // Automatically update the service worker
+    manifest: {
+      name: "Forecasting Lithium-Ion Battery RUL",
+      short_name: "Battery RUL",
+      description:
+        "One of the best online battery prediction model on battery remaining useful life.",
+      theme_color: "#382973",
+      icons: [
+        {
+          src: "/pwa-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "/pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: ["**/*.{js,css,html,png,svg,jpg,jpeg,json}"], // Customize caching patterns
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/myapi\.com\/.*$/,
+          handler: "NetworkFirst",
+          options: {
+            cacheName: "api-cache",
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 86400, // cache for 24 hours
+            },
+          },
+        },
+      ],
+    },
   },
 
   // axios: {

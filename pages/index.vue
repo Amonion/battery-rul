@@ -35,7 +35,8 @@
     <div v-if="isError" class="error">{{ error }}</div>
     <div class="prediction-body" v-if="showResponse">
       <div class="prediction-title">
-        Battery Remaining Useful Life: {{ (prediction * 1).toFixed(5) }}
+        Battery Remaining Useful Life: {{ (prediction * 1).toFixed(5) }} Cycle
+        Index
       </div>
       <div class="prediction-title">Battery Health Condition: {{ health }}</div>
       <div>
@@ -85,7 +86,7 @@ export default {
     fetch(`${this.url1}/api/models/`)
       .then((response) => response.json())
       .then((data) => {
-        this.models = data.models;
+        this.models = array.reverse(data.models);
       });
   },
   methods: {

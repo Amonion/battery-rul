@@ -17,7 +17,7 @@
     </svg>
     <div class="feature_main_title">Features</div>
     <div class="each-feature-input">
-      <div class="feature_title">Cicle Index</div>
+      <div class="feature_title">Cycle Index</div>
       <input
         class="feature_input lon w-input"
         v-model="Cycle_Index"

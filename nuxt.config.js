@@ -42,10 +42,14 @@ export default {
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+      { name: "apple-mobile-web-app-title", content: "Battery RUL" },
     ],
 
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "stylesheet", type: "text/css", href: "/css/main.css" },
       { href: "https://fonts.googleapis.com", rel: "preconnect" },
       {

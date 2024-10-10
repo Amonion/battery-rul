@@ -43,8 +43,8 @@
         <table v-if="response.length" class="table table-bordered">
           <thead>
             <tr>
-              <th>Title</th>
               <th>Recommendation</th>
+              <th>Optimization Strategy</th>
             </tr>
           </thead>
           <tbody>

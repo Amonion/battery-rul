@@ -86,7 +86,7 @@ export default {
     fetch(`${this.url1}/api/models/`)
       .then((response) => response.json())
       .then((data) => {
-        this.models = array.reverse(data.models);
+        this.models = data.models.reverse();
       });
   },
   methods: {

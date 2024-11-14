@@ -75,6 +75,36 @@
     </div>
 
     <div class="each-feature-input">
+      <div class="feature_title">Time</div>
+      <input
+        class="feature_input lon w-input"
+        v-model="Time"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="0"
+        type="number"
+      />
+      <div class="feature_footer">
+        <!-- <div>880728.1</div> -->
+      </div>
+    </div>
+
+    <div class="each-feature-input">
+      <div class="feature_title">Time Constant Current</div>
+      <input
+        class="feature_input lon w-input"
+        v-model="Time_constant_current"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="0"
+        type="number"
+      />
+      <div class="feature_footer">
+        <!-- <div>880728.1</div> -->
+      </div>
+    </div>
+
+    <div class="each-feature-input">
       <div class="feature_title">Charging Time</div>
       <input
         class="feature_input lon w-input"
@@ -100,6 +130,8 @@ export default {
       Decrement: 0,
       Max_Voltage_Discharge: 3.043,
       Min_Voltage_Charge: 3.022,
+      Time: 5.98,
+      Time_constant_current: 5.98,
       Charging_time: 5.98,
       features: [
         {

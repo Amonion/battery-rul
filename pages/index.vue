@@ -1,6 +1,8 @@
 <template>
   <div class="main-content">
-    <h1 class="main-title">RUL PREDICTION FOR LITHIUM-ION BATTERY</h1>
+    <h1 class="main-title">
+      SIMULATOR APP FOR PREDICTION OF LITHUIM ION 18650 BATTERIESY
+    </h1>
     <div class="model-select">
       <div @click="isActive = !isActive" class="select-ead">
         <div>{{ selectedModel }}</div>

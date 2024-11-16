@@ -31,6 +31,7 @@
         <div>1134</div>
       </div>
     </div>
+
     <div class="each-feature-input">
       <div class="feature_title">Discharge Time</div>
       <input
@@ -46,6 +47,7 @@
         <div>958320.37</div>
       </div>
     </div>
+
     <div class="each-feature-input">
       <div class="feature-input-flex">
         <div class="feature_title">Min Voltage</div>
@@ -85,7 +87,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <!-- <div>880728.1</div> -->
+        <div>1.00</div>
+        <div>245101.117</div>
       </div>
     </div>
 
@@ -100,7 +103,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <!-- <div>880728.1</div> -->
+        <div>5.98</div>
+        <div>880728.1</div>
       </div>
     </div>
 

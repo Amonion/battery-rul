@@ -159,22 +159,22 @@ export default {
     },
   },
 
-  // axios: {
-  //   baseURL: "https://americanwealthvault.com/america/api",
-  // },
-
-  // publicRuntimeConfig: {
-  //   FILE_URL: "https://americanwealthvault.com/america/api/uploads",
-  // },
-
   axios: {
-    baseURL: "http://127.0.0.1:8000/",
-    responseType: "json",
+    baseURL: "https://americanwealthvault.com/america/api",
   },
 
   publicRuntimeConfig: {
-    FILE_URL: "http://127.0.0.1:8000/api/uploads",
+    FILE_URL: "https://americanwealthvault.com/america/api/uploads",
   },
+
+  // axios: {
+  //   baseURL: "http://127.0.0.1:8000/",
+  //   responseType: "json",
+  // },
+
+  // publicRuntimeConfig: {
+  //   FILE_URL: "http://127.0.0.1:8000/api/uploads",
+  // },
 
   //Build Configuration: https://go.nuxtjs.dev/config-build
   target: "static",

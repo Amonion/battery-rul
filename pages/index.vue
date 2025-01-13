@@ -80,7 +80,7 @@ export default {
       error: "",
       isError: "",
       url: "http://127.0.0.1:8000",
-      url1: "https://battery-backend.onrender.com",
+      url1: "https://battery-api.up.railway.app",
     };
   },
 

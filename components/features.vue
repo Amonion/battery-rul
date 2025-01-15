@@ -16,7 +16,7 @@
       ></path>
     </svg>
     <div class="feature_main_title">Features</div>
-    <div class="each-feature-input">
+    <!-- <div class="each-feature-input">
       <div class="feature_title">Cycle Index</div>
       <input
         class="feature_input lon w-input"
@@ -30,7 +30,7 @@
         <div>1</div>
         <div>1134</div>
       </div>
-    </div>
+    </div> -->
 
     <div class="each-feature-input">
       <div class="feature_title">Discharge Time</div>

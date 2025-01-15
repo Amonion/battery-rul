@@ -43,4 +43,10 @@ export default {
 body {
   background: #000;
 }
+
+.main-space {
+  background: url("/battery.png");
+  background-size: cover;
+  background-position: center;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <h1 class="main-title">
-      SIMULATOR APP FOR PREDICTION OF LITHUIM ION 18650 BATTERIESY
+      SIMULATOR APP FOR PREDICTION OF LITHUIM ION 18650 BATTERY
     </h1>
     <div class="model-select">
       <div @click="isActive = !isActive" class="select-ead">
@@ -160,6 +160,14 @@ export default {
   margin: 10px 0;
   font-weight: 300;
   font-size: 16px;
+}
+
+.eac-model-opt {
+  border-bottom: 1px solid #2e2748a3;
+}
+
+.drop-list {
+  background-color: #382973;
 }
 
 .table {

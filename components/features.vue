@@ -67,8 +67,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>8.69</div>
-        <div>958320.37</div>
+        <div>3.4</div>
+        <div>3.6</div>
       </div>
     </div>
 

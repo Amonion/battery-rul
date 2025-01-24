@@ -16,7 +16,7 @@
       ></path>
     </svg>
     <div class="feature_main_title">Features</div>
-    <!-- <div class="each-feature-input">
+    <div class="each-feature-input">
       <div class="feature_title">Cycle Index</div>
       <input
         class="feature_input lon w-input"
@@ -26,11 +26,19 @@
         placeholder="0"
         type="number"
       />
+      <!-- <input
+        class="feature_input lon w-input"
+        v-model="Cycle_Index"
+        @blur="setFeatures(1, 1134, 'Cycle_Index')"
+        @keyup="setFeatures"
+        placeholder="0"
+        type="number"
+      /> -->
       <div class="feature_footer">
         <div>1</div>
         <div>1134</div>
       </div>
-    </div> -->
+    </div>
 
     <div class="each-feature-input">
       <div class="feature_title">Discharge Time</div>
@@ -40,6 +48,22 @@
         @blur="setFeatures"
         @keyup="setFeatures"
         placeholder="Enter Discharge Time"
+        type="number"
+      />
+      <div class="feature_footer">
+        <div>8.69</div>
+        <div>958320.37</div>
+      </div>
+    </div>
+
+    <div class="each-feature-input">
+      <div class="feature_title">Decrement</div>
+      <input
+        class="feature_input lon w-input"
+        v-model="Decrement"
+        @blur="setFeatures"
+        @keyup="setFeatures"
+        placeholder="Enter Decrement"
         type="number"
       />
       <div class="feature_footer">
@@ -131,7 +155,7 @@ export default {
     return {
       Cycle_Index: 1,
       Discharge_Time: 8.69,
-      Decrement: 0,
+      Decrement: 3.4,
       Max_Voltage_Discharge: 3.043,
       Min_Voltage_Charge: 3.022,
       Time: 5.98,
@@ -150,9 +174,14 @@ export default {
         },
         {
           column: "Decrement",
-          min: -397645.908,
-          max: 406703.768,
+          min: 3.4,
+          max: 3.6,
         },
+        // {
+        //   column: "Decrement",
+        //   min: -397645.908,
+        //   max: 406703.768,
+        // },
         {
           column: "Max_Voltage_Discharge",
           min: 3.043,

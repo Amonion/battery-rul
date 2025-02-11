@@ -33,7 +33,10 @@
         </div>
       </div>
     </div>
-    <div class="predict-btn" @click="sendPrediction">Predict</div>
+    <div v-if="loading" class="predict-btn" @click="sendPrediction">
+      Processing...
+    </div>
+    <div v-else class="predict-btn" @click="sendPrediction">Predict</div>
     <div v-if="isError" class="error">{{ error }}</div>
     <div class="prediction-body" v-if="showResponse">
       <div class="prediction-title">
@@ -73,6 +76,7 @@ export default {
       selectedModel: "Select Model",
       prediction: "",
       isActive: false,
+      loading: false,
 
       showResponse: false,
       response: "",
@@ -85,10 +89,12 @@ export default {
   },
 
   mounted() {
+    this.loading = true;
     fetch(`${this.url1}/api/models/`)
       .then((response) => response.json())
       .then((data) => {
         this.models = data.models.reverse();
+        this.loading = false;
       });
   },
   methods: {
@@ -119,7 +125,7 @@ export default {
         model_name: this.selectedModel,
         features: features,
       };
-
+      this.loading = true;
       fetch(`${this.url1}/api/predict/`, {
         method: "POST",
         headers: {
@@ -138,11 +144,13 @@ export default {
           this.response = data.optimization_suggestion || [];
           this.health = data.battery_health_category;
           this.showResponse = true;
+          this.loading = false;
         })
         .catch((error) => {
           this.isError = true;
           this.error = `Error fetching prediction: ${error}`;
           this.showResponse = false;
+          this.loading = false;
         });
     },
   },

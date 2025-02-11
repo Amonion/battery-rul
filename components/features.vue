@@ -17,7 +17,7 @@
     </svg>
     <div class="feature_main_title">Features</div>
     <div class="each-feature-input">
-      <div class="feature_title">Cycle Index</div>
+      <div class="feature_title">Cycle Count</div>
       <input
         class="feature_input lon w-input"
         v-model="Cycle_Index"
@@ -57,7 +57,7 @@
     </div>
 
     <div class="each-feature-input">
-      <div class="feature_title">Decrement</div>
+      <div class="feature_title">Decrement 3.6-3.4V (s)</div>
       <input
         class="feature_input lon w-input"
         v-model="Decrement"
@@ -67,8 +67,8 @@
         type="number"
       />
       <div class="feature_footer">
-        <div>3.4</div>
-        <div>3.6</div>
+        <div>2.00</div>
+        <div>406703.77</div>
       </div>
     </div>
 
@@ -101,7 +101,7 @@
     </div>
 
     <div class="each-feature-input">
-      <div class="feature_title">Time</div>
+      <div class="feature_title">Time at 4.1V (s)</div>
       <input
         class="feature_input lon w-input"
         v-model="Time"
@@ -174,8 +174,8 @@ export default {
         },
         {
           column: "Decrement",
-          min: 3.4,
-          max: 3.6,
+          min: 2.0,
+          max: 406703.77,
         },
         // {
         //   column: "Decrement",

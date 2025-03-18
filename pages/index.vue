@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <h1 class="main-title">
-      SIMULATOR APP FOR PREDICTION OF LITHUIM ION 18650 BATTERY
+      SIMULATOR APP FOR THE FORCASTING OF LITHUIM ION 18650 BATTERY
     </h1>
     <div class="model-select">
       <div @click="isActive = !isActive" class="select-ead">
